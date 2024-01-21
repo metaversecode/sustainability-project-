@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <style>
+            #p1{
+                text-align: center;
+                font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                font-size: 150%;
+            }
+            #fuck{
+                font-size: 400%;
+                color: dodgerblue;
+                position: relative;
+                top:25px
+            }
+            
+        </style>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+<link href="https://fonts.googleapis.com/css2?family=Baumans&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <p id = "p1">Your Sustainability score is <span id = "fuck">loading..  &nbsp;</span>out of 10</p>
+        <script>
+            document.getElementById("fuck").onclick = function(){
+                window.location.replace("a.html")
+            }
+            var a = sessionStorage.getItem("score")
+            document.getElementById("fuck").innerHTML = parseFloat(a).toFixed(1)
+        </script>
+        </body>
+        </html>
